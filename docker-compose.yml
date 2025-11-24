@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  insights-platform:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GROK_KEY=${GROK_KEY}
+      - DATABASE_URL=sqlite+aiosqlite:///./insights.db
+    volumes:
+      - ./insights.db:/app/insights.db  # Persist database
+    restart: unless-stopped
+    # Resource constraints as specified
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '1'
+          memory: 512M
+
