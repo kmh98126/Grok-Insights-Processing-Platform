@@ -15,7 +15,7 @@ A FastAPI-based backend API for analyzing Twitter conversations using Grok AI. T
 
 - Python 3.11+
 - Docker and Docker Desktop
-- Grok API key (use promo code `grok_eng_5aef7b52` on console.x.ai)
+- Grok API key 
 
 ## Quick Start
 
@@ -235,6 +235,3 @@ curl "http://localhost:8000/api/v1/insights?start_time=2025-01-01T00:00:00Z&end_
 - `DATABASE_URL`: Database connection string (default: `sqlite+aiosqlite:///./insights.db`)
 - `API_URL`: API base URL for data ingestion (default: `http://localhost:8000`)
 
-## License
-
-This project is part of the xAI assessment.
